@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/index.css') }}"
+    />
+    <title>English to French Translator</title>
+  </head>
+  <body>
+    <form action="/translate" method="get">
+      <h2 class="title">En To Fr Translator</h2>
+      <div class="content">
+        <div class="div_tran">
+          <h4>English</h4>
+          <textarea
+            name="en_sentence"
+            id="t1"
+            placeholder="Enter text..."
+            required
+          >
+{% if en_sentence %}{{ en_sentence }}{% endif %}</textarea
+          >
+        </div>
+        <div class="div_tran">
+          <h4>French</h4>
+          <textarea name="fr_sentence" id="t2" readonly>
+{% if fr_sentence %}{{ fr_sentence }}{% endif %}</textarea
+          >
+        </div>
+      </div>
+      <input type="submit" value="Translate" />
+    </form>
+  </body>
+</html>
