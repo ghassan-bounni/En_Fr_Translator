@@ -1,9 +1,9 @@
 import pandas as pd
 import numpy as np
 from keras.preprocessing.text import Tokenizer
-from tensorflow.keras.utils import pad_sequences
+from keras.utils import pad_sequences
 import re
-import tensorflow as tf
+# import tensorflow as tf
 from keras.models import load_model
 import logging
 import os
