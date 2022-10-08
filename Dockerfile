@@ -1,8 +1,8 @@
-FROM python:3.8
+FROM python:3.9
 
 # Create the working directory
-RUN set -ex && mkdir /classifier
-WORKDIR /classifier
+RUN set -ex && mkdir /en_fr_translator
+WORKDIR /en_fr_translator
 
 # Install Python dependencies
 COPY requirements.txt ./requirements.txt
@@ -14,5 +14,5 @@ COPY . ./
 
 # Run the web server
 EXPOSE 8000
-ENV PYTHONPATH /classifier
-CMD python3 /classifier/app.py
+ENV PYTHONPATH /en_fr_translator
+CMD python /en_fr_translator/app.py

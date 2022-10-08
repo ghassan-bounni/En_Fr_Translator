@@ -1,12 +1,14 @@
-import logging
-
-from keras.models import load_model
-import tensorflow as tf
-import re
-from tensorflow.keras.utils import pad_sequences
-from keras.preprocessing.text import Tokenizer
-import numpy as np
 import pandas as pd
+import numpy as np
+from keras.preprocessing.text import Tokenizer
+from tensorflow.keras.utils import pad_sequences
+import re
+import tensorflow as tf
+from keras.models import load_model
+import logging
+import os
+# hide TF warnings
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 
 class En_Fr_Translator:
